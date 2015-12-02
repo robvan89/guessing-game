@@ -19,7 +19,7 @@
 
 
   <font size= "5.5em" color="#0000FF"><b><div id="nukeit" align="center">Quiz incomplete
-  </div></b></font>
+  </div></b></font><br><center><input type="button" value="Replay" onclick='ggame();'></center>
   <p align= "center"><b><font size="6.2em">About Me</font></b></p>
   <p align= "center">Hi! My name is Rob.<br>
     I currently design/manage <a href= "http://www.cardexchangegaming.com">the website</a> for a gaming store on Aurora. I also organize and run the store's events.<br>
@@ -42,7 +42,7 @@ My boyfriend and I have been together 7 years. We're currently arguing over what
   'Question 4. How many cats did my parents have when I was growing up?'];
   var answs = ['y', 'n', 'n', 5, 'five'];
   var resps = ['Good job! You answered yes, which is correct. Time for question 2!',
-  'You answered no, but My mother does have a dog named Amber.',
+  'You answered no, but my mother does have a dog named Amber.',
   'Good job! You answered no, which was correct. Great success!',
   "You answered yes, but I've actually never had regular Mountain Dew. I'm weird, I know, you don't have to remind me.",
   'Good job! You answered no, which was correct. Just one more question after this!',
@@ -97,11 +97,11 @@ My boyfriend and I have been together 7 years. We're currently arguing over what
   }
   else if (qu4 > 5) {
     alert("You answered " + qu4 + ", but there weren't that many. My life wasn't an episode of Animal Hoarders.");
-    missed += '4';
+    missed += ' 4';
   }
-  else if (qu4 < 5) {
+  else {
     alert("You answered " + qu4 + ". My mom's cat lady game was a bit stronger than that!");
-    missed += '4';
+    missed += ' 4';
   }
     if (score < 4)
     {
