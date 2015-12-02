@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Guessing Game</title>
+</head>
+<body>
+  <p align="center"><b><font size="7.0em" color="#CC0000">Let's Play a Game</font></b></p>
+  <p><h1>Here's what this script is doing:</h1></p>
+  <p><h2>The initial prompt asks the player for their name and logging its value into the console.</h2></p>
+  <p><h2>First, it's declaring a variable for the player's <font color="#FF0000">score</font>.</h2></p>
+  <p><h2>Then, it gives the player a prompt involving a yes or no question.</h2></p>
+  <p><li>The <font color= "#CC0000">toLowerCase()</font> function is used in case the player uses capitalization when inputting their answers.</li></p>
+  <p><h2>The resulting lower-case string is assigned to a variable, which is then checked against the answer (either yes or no) for that question.</h2></p>
+  <p><h2>If the answer is correct, the <font color="#FF0000">score</font> variable is increased by 1 and the script moves on to the next question.</h2></p>
+  <p><li>(Otherwise, the script adds the question to the missed variable and moves on to the next question.)</li></p>
+  <p><h2>The remaining questions are fired off, and their answers are checked.</h2></p>
+  <p><h2>After all questions have been answered, an <font color= "#BBFFA2">alert</font> pops up displaying the player's final score.</h2></p>
+  <p><li>The message at the end of the <font color= "#BBFFA2">alert</font> varies depending on how well the player did.</li></p>
+  <p><h2>The page displays the player's final score where the text in the nukeit div was.</h2></p>
+
+
+  <font size= "5.5em" color="#0000FF"><b><div id="nukeit" align="center">Quiz incomplete
+  </div></b></font>
+  <p align= "center"><b><font size="6.2em">About Me</font></b></p>
+  <p align= "center">Hi! My name is Rob.<br>
+    I currently design/manage <a href= "http://www.cardexchangegaming.com">the website</a> for a gaming store on Aurora. I also organize and run the store's events.<br>
+  In my free time, I like weightlifting, going to metal concerts, and playing Magic: the Gathering.<br>
+  Amaranthe is my favorite band.<br>
+My boyfriend and I have been together 7 years. We're currently arguing over what kind of pet we want.<br>
+...and no, I've never had regular Mountain Dew.</p>
+  <p>
+    <script>
+    function ggame(name,qu1,qu2,qu3)
+  {
+  var score = 0;
+  var missed = "";
+  var name = prompt('What is your name?');
+  console.log(name);
+  var qu1 = prompt('Hello, ' + name + '. Question 1. Does my mother have a dog named Amber?');
+  qu1 = qu1.toLowerCase();
+  console.log(qu1 + " was the player's response to question 1.");
+  qu1 = qu1.charAt(0);
+  if(qu1 == 'y')
+  {
+  score++;
+  alert('Good job, ' + name + '! You answered yes, which is correct. Time for question 2!');
+  }
+  else {
+  missed += "1";
+  alert('You answered no, but My mother does have a dog named Amber.');
+  }
+  var qu2 = prompt('Question 2. Have I ever had regular Mountain Dew?');
+  qu2 = qu2.toLowerCase();
+  console.log(qu2 + " was the player's response to question 2.");
+  qu2 = qu2.charAt(0);
+  if(qu2 == 'n')
+  {
+  score++;
+  alert('Good job, ' + name + '! You answered no, which was correct. Great success!');
+  }
+  else {
+  missed += " 2";
+  alert("You answered yes, but I've actually never had regular Mountain Dew. I'm weird, I know, you don't have to remind me.");
+  }
+  var qu3 = prompt('Question 3. Do I have any tattoos?');
+  qu3 = qu3.toLowerCase();
+  console.log(qu3 + " was the player's response to question 3.");
+  qu3 = qu3.charAt(0);
+  if(qu3 == 'n')
+  {
+  score++;
+  alert('Good job, ' + name + '! You answered no, which was correct. Just one more question after this!');
+  }
+  else {
+  missed += " 3";
+  alert("You answered yes, but I don't have any tattoos - I can't find anything I'd want to commit to. One more question to go.");
+  }
+  var qu4 = prompt('Question 4. How many cats did my parents have when I was growing up?');
+  qu4 = qu4.toLowerCase();
+  console.log(qu4 + " was the player's response to question 4.");
+  parseInt(qu4);
+  if(qu4 == 5)
+  {
+  score++;
+  alert('Good job, ' + name + '! Fur flew on the daily during my childhood.');
+  }
+  else if (qu4 > 5) {
+    alert("You answered " + qu4 + ", but there weren't that many. My life wasn't an episode of Animal Hoarders.");
+  }
+  else if (qu4 < 5) {
+  alert("You answered " + qu4 + ". My mom's cat lady game was a bit stronger than that!");
+  }
+    if (score < 4)
+    {
+    alert('Your score was ' + score + '/4. You missed questions ' + missed + '. Better luck next time!');
+    }
+    if (score == 4)
+    {
+      alert('You got them all right! Good job!');
+    }
+    var tally = name + ', your final score was ' + score + '/4.'
+    document.getElementById('nukeit');
+    nukeit.textContent = tally;
+  }
+  ggame();
+    </script>
+</body>
+</html>
