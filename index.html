@@ -35,59 +35,73 @@ My boyfriend and I have been together 7 years. We're currently arguing over what
   var missed = "";
   var name = prompt('What is your name?');
   console.log(name);
-  var qu1 = prompt('Hello, ' + name + '. Question 1. Does my mother have a dog named Amber?');
+  var q1 = 'Hello, ' + name + '. Question 1. Does my mother have a dog named Amber?';
+  var qus = [q1,
+  'Question 2. Have I ever had regular Mountain Dew?',
+  'Question 3. Do I have any tattoos?',
+  'Question 4. How many cats did my parents have when I was growing up?'];
+  var answs = ['y', 'n', 'n', 5, 'five'];
+  var resps = ['Good job! You answered yes, which is correct. Time for question 2!',
+  'You answered no, but My mother does have a dog named Amber.',
+  'Good job! You answered no, which was correct. Great success!',
+  "You answered yes, but I've actually never had regular Mountain Dew. I'm weird, I know, you don't have to remind me.",
+  'Good job! You answered no, which was correct. Just one more question after this!',
+  "You answered yes, but I don't have any tattoos - I can't find anything I'd want to commit to. One more question to go."]
+  var qu1 = prompt(qus[0]);
   qu1 = qu1.toLowerCase();
   console.log(qu1 + " was the player's response to question 1.");
   qu1 = qu1.charAt(0);
-  if(qu1 == 'y')
+  if(qu1 == answs[0])
   {
   score++;
-  alert('Good job, ' + name + '! You answered yes, which is correct. Time for question 2!');
+  alert(resps[0]);
   }
   else {
   missed += "1";
-  alert('You answered no, but My mother does have a dog named Amber.');
+  alert(resps[1]);
   }
-  var qu2 = prompt('Question 2. Have I ever had regular Mountain Dew?');
+  var qu2 = prompt(qus[1]);
   qu2 = qu2.toLowerCase();
   console.log(qu2 + " was the player's response to question 2.");
   qu2 = qu2.charAt(0);
-  if(qu2 == 'n')
+  if(qu2 == answs[1])
   {
   score++;
-  alert('Good job, ' + name + '! You answered no, which was correct. Great success!');
+  alert(resps[2]);
   }
   else {
   missed += " 2";
-  alert("You answered yes, but I've actually never had regular Mountain Dew. I'm weird, I know, you don't have to remind me.");
+  alert(resps[3]);
   }
-  var qu3 = prompt('Question 3. Do I have any tattoos?');
+  var qu3 = prompt(qus[2]);
   qu3 = qu3.toLowerCase();
   console.log(qu3 + " was the player's response to question 3.");
   qu3 = qu3.charAt(0);
-  if(qu3 == 'n')
+  if(qu3 == answs[2])
   {
   score++;
-  alert('Good job, ' + name + '! You answered no, which was correct. Just one more question after this!');
+  alert(resps[4]);
   }
   else {
   missed += " 3";
-  alert("You answered yes, but I don't have any tattoos - I can't find anything I'd want to commit to. One more question to go.");
+  alert(resps[5]);
   }
-  var qu4 = prompt('Question 4. How many cats did my parents have when I was growing up?');
+  var qu4 = prompt(qus[3]);
   qu4 = qu4.toLowerCase();
   console.log(qu4 + " was the player's response to question 4.");
   parseInt(qu4);
-  if(qu4 == 5)
+  if(qu4 == answs[3] || qu4 == answs[4])
   {
   score++;
   alert('Good job, ' + name + '! Fur flew on the daily during my childhood.');
   }
   else if (qu4 > 5) {
     alert("You answered " + qu4 + ", but there weren't that many. My life wasn't an episode of Animal Hoarders.");
+    missed += '4';
   }
   else if (qu4 < 5) {
-  alert("You answered " + qu4 + ". My mom's cat lady game was a bit stronger than that!");
+    alert("You answered " + qu4 + ". My mom's cat lady game was a bit stronger than that!");
+    missed += '4';
   }
     if (score < 4)
     {
