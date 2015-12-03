@@ -87,8 +87,15 @@ My boyfriend and I have been together 7 years. We're currently arguing over what
   alert(resps[5]);
   }
   var qu4 = prompt(qus[3]);
-  qu4 = qu4.toLowerCase();
   console.log(qu4 + " was the player's response to question 4.");
+  var q4t = isNaN(qu4);
+  while (q4t == true) {
+    alert("Please enter a number.")
+    qu4 = prompt(qus[3]);
+    console.log(qu4 + " was the player's response to question 4.");
+    parseInt(qu4);
+    q4t = isNaN(qu4);
+  }
   parseInt(qu4);
   if(qu4 == answs[3] || qu4 == answs[4])
   {
