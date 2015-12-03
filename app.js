@@ -144,7 +144,7 @@ if (score == 6)
   alert('You got them all right! Good job!');
 }
 var tally = name + ', your final score was ' + score + '/6.'
-document.getElementById('nukeit');
-nukeit.textContent = tally;
+var nki = document.getElementById('nukeit');
+nki.textContent = tally;
 }
 ggame();
