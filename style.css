@@ -1,12 +1,3 @@
-@font-face {
-    font-family: 'Aspergit';
-    src: url('/aspergit/a.otf');
-    src: url('/aspergit/ab.otf');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 .success {
   color: #55AA00;
 }
