@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"><title>Guessing Game</title>
-  <script src="app.js" type="text/javascript"></script>
+  <link href='http://www.cardexchangegaming.com/files/assets/fonts/Aspergit/Aspergit___-webfont.ttf' rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-  <p align="center"><b><font size="7.0em" color="#CC0000">Let's Play a Game</font></b></p>
-  <p><h1>Here's what this script is doing:</h1></p>
-  <p><h2>The initial prompt asks the player for their name and logging its value into the console.</h2></p>
-  <p><h2>First, it's declaring a variable for the player's <font color="#FF0000">score</font>.</h2></p>
-  <p><h2>Then, it gives the player a prompt involving a yes or no question.</h2></p>
-  <p><li>The <font color= "#CC0000">toLowerCase()</font> function is used in case the player uses capitalization when inputting their answers.</li></p>
-  <p><h2>The resulting lower-case string is assigned to a variable, which is then checked against the answer (either yes or no) for that question.</h2></p>
-  <p><h2>If the answer is correct, the <font color="#FF0000">score</font> variable is increased by 1 and the script moves on to the next question.</h2></p>
-  <p><li>(Otherwise, the script adds the question to the missed variable and moves on to the next question.)</li></p>
-  <p><h2>The remaining questions are fired off, and their answers are checked.</h2></p>
-  <p><h2>After all questions have been answered, an <font color= "#BBFFA2">alert</font> pops up displaying the player's final score.</h2></p>
-  <p><li>The message at the end of the <font color= "#BBFFA2">alert</font> varies depending on how well the player did.</li></p>
-  <p><h2>The page displays the player's final score where the text in the nukeit div was.</h2></p>
+  <h1>Let's Play a Game</h1>
+  <p>
+    &nbsp;
+    <p>
+  Here's what this script is doing:
+<p>
+The initial prompt asks the player for their name and logging its value into the console.
+<p>
+First, it's declaring a variable for the player's score.
+<p>
+Then, it gives the player a prompt involving a yes or no question.
+<p>
+The toLowerCase() function is used in case the player uses capitalization when inputting their answers.
+The resulting lower-case string is assigned to a variable, which is then checked against the answer (either yes or no) for that question.
+<p>
+If the answer is correct, the score variable is increased by 1 and the script moves on to the next question.
+<br>
+<i>(Otherwise, the script adds the question to the missed variable and moves on to the next question.)</i>
+<p>
+The remaining questions are fired off, and their answers are checked.
+<p>
+After all questions have been answered, the final score is displayed at the bottom.
 
+<h2>Question 1.</h2>
+<div id="qe1">You haven't answered question 1 yet.</div>
+<div id="qg1">.</div>
+<h2>Question 2.</h2>
+<div id="qe2">You haven't answered question 2 yet.</div>
+<div id="qg2">.</div>
+<h2>Question 3.</h2>
+<div id="qe3">You haven't answered question 3 yet.</div>
+<div id="qg3">.</div>
+<h2>Question 4.</h2>
+<div id="qe4">You haven't answered question 4 yet.</div>
+<div id="qg4">.</div>
+<h2>Question 5.</h2>
+<div id="qe5">You haven't answered question 5 yet.</div>
+<div id="qg5">.</div>
+<h2>Question 6.</h2>
+<div id="qe6">You haven't answered question 6 yet.</div>
+<div id="qg6">.</div>
 
   <font size= "5.5em" color="#0000FF"><b><div id="nukeit" align="center">Quiz incomplete
-  </div></b></font><br><center><input type="button" value="Replay" onclick='ggame();'></center>
-  <p align= "center"><b><font size="6.2em">About Me</font></b></p>
-  <p align= "center">Hi! My name is Rob.<br>
-    I currently design/manage <a href= "http://www.cardexchangegaming.com">the website</a> for a gaming store on Aurora. I also organize and run the store's events.<br>
-  In my free time, I like weightlifting, going to metal concerts, and playing Magic: the Gathering.<br>
-  Amaranthe is my favorite band.<br>
-My boyfriend and I have been together 7 years. We're currently arguing over what kind of pet we want.<br>
-...and no, I've never had regular Mountain Dew.</p>
+  </div></b></font><br><center><input type="button" value="Replay" onclick='regame();'></center>
   <p>
+    <script src="app.js" type="text/javascript"></script>
 </body>
 </html>
