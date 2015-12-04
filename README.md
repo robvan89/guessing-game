@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 # guessing-game
-Guessing game for cf201
+Rob Van Leuven
+Guessing game for cf201 (contains index.html, about.html, app.js, this file, myfbpic.jpg)
+A game in which a player guesses the answer to various questions about me, and is displayed feedback based on their answers.
+The game checks the player's submissions against the recorded answers, some of which are generated randomly.
+Here's a "joke":
+Two people are conversing at a bar.
+A: Your place or mine?
+B: Both. You go to yours and I go to mine.
 =======
-# fungame
-a fun game
->>>>>>> 3f30925d8578800c2e62d0d76fe4ff559846475b
